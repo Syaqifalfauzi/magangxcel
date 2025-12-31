@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+/* =========================
+   ROOT THEME (MINING/FIELD MODE)
+   ========================= */
+:root {
+  /* base */
+  --background: #2B2E2E;
+  /* Charcoal Gray */
+  --foreground: #F5F5F2;
+  /* Off White */
+
+  /* surfaces */
+  --surface: #3A3328;
+  /* Dark Earth Brown */
+  --border: #4A4538;
+  --muted: #8B7E66;
+  /* Khaki */
+
+  /* brand */
+  --primary: #2F4F3E;
+  /* Olive Green */
+  --primary-hover: #243E30;
+  --primary-foreground: #F5F5F2;
+
+  /* accents */
+  --accent: #F2C94C;
+  /* Safety Yellow */
+  --accent-foreground: #2B2E2E;
+
+  --accent-orange: #F2994A;
+  /* Safety Orange */
+  --accent-orange-foreground: #2B2E2E;
+
+  --secondary: #3A3328;
+  /* Earth Brown */
+  --secondary-foreground: #F5F5F2;
+}
+
+/* =========================
+   TAILWIND V4 TOKENS
+   ========================= */
+@theme inline {
+  /* colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-orange-foreground: var(--accent-orange-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  /* typography */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* =========================
+   BASE STYLES
+   ========================= */
+body {
+  background-color: var(--background);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+/* Headings = corporate & tegas */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 600;
+}
+
+/* Section spacing helper */
+section {
+  scroll-margin-top: 5rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.leaflet-container {
+  z-index: 0;
+}
