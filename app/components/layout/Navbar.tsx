@@ -28,12 +28,12 @@ export default function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-sm">
             <NavLink href="#hero">Beranda</NavLink>
-            <NavLink href="#about">Tentang Perusahaan</NavLink>
-            <NavLink href="#internship">Magang</NavLink>
-            <NavLink href="#activities">Kegiatan</NavLink>
-            <NavLink href="#stats">Statistik</NavLink>
-            <NavLink href="#team">Tim</NavLink>
-            <NavLink href="#cta">CTA</NavLink>
+            <NavLink href="#about">Tentang Tim</NavLink>
+            <NavLink href="#internship">Perjalanan Magang</NavLink>
+            <NavLink href="#activities">Ngapain Aja</NavLink>
+            <NavLink href="#stats">Hasil & Dampak</NavLink>
+            <NavLink href="#team">Squad</NavLink>
+            <NavLink href="#cta">Karya Kami</NavLink>
 
             <Link
               href="/map"
@@ -62,22 +62,22 @@ export default function Navbar() {
                 Beranda
               </NavLink>
               <NavLink href="#about" onClick={() => setOpen(false)}>
-                Tentang Perusahaan
+                Tentang Tim
               </NavLink>
               <NavLink href="#internship" onClick={() => setOpen(false)}>
-                Magang
+                Perjalanan Magang
               </NavLink>
               <NavLink href="#activities" onClick={() => setOpen(false)}>
-                Kegiatan
+                Ngapain Aja
               </NavLink>
               <NavLink href="#stats" onClick={() => setOpen(false)}>
-                Statistik
+                Hasil & Dampak
               </NavLink>
               <NavLink href="#team" onClick={() => setOpen(false)}>
-                Tim
+                Squad
               </NavLink>
               <NavLink href="#cta" onClick={() => setOpen(false)}>
-                CTA
+                Karya Kami
               </NavLink>
               <Link
                 href="/map"
