@@ -42,7 +42,7 @@ export default function Footer() {
                   href="#about"
                   className="text-muted hover:text-accent transition"
                 >
-                  Tentang Perusahaan
+                  Tentang Tim
                 </a>
               </li>
               <li>
@@ -50,7 +50,7 @@ export default function Footer() {
                   href="#internship"
                   className="text-muted hover:text-accent transition"
                 >
-                  Program Magang
+                  Perjalanan Magang
                 </a>
               </li>
               <li>
@@ -58,7 +58,7 @@ export default function Footer() {
                   href="#activities"
                   className="text-muted hover:text-accent transition"
                 >
-                  Kegiatan
+                  Ngapain Aja
                 </a>
               </li>
               <li>
