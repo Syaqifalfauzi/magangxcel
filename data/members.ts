@@ -44,7 +44,7 @@ export const members: Member[] = [
   },
   {
     id: 7,
-    name: "SALMA NURALIFA SUTIARA",
+    name: "SALMA NURALIFAH SUTIARA",
     nim: "2202916",
     photo: "/team/salmanur.png",
   },

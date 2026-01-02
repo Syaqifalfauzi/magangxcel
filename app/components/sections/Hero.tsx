@@ -60,6 +60,7 @@ export default function Hero() {
             <Image
               src="/team/squad.png"
               alt="Company Activity"
+              fill
               className="object-cover"
             />
 

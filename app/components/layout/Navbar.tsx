@@ -18,7 +18,7 @@ export default function Navbar() {
           {/* Brand */}
           <div className="text-primary font-semibold text-lg tracking-wide">
             <Image
-              src="/sponsor/XCEL.png"
+              src="/sponsor/aox.png"
               alt="Logo PT XYZ Geodesi"
               width={100}
               height={100}

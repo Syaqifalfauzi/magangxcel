@@ -1,3 +1,12 @@
+type ProjectSection = {
+  title: string;
+  description: string;
+  photos?: string[];
+  pdf?: string;
+  objects3d?: string[]; // 👈 MULTIPLE .obj
+
+};
+
 export type Project = {
   id: number;
   title: string;
@@ -5,23 +14,23 @@ export type Project = {
   location: string;
   preview: string;
   previewPdf: string;
+
   files: {
     image: string;
     pdf?: string;
   }[];
+
   latitude: number;
-  longitude: number;
-
+    longitude: number;
   description: string;
-
-  memberIds: number[]; // 👈 PAKAI ID
-
+  memberIds: number[];
 
   surveyDate?: string;
   equipment?: string[];
-};
 
-
+  // 👇 TAMBAHKAN INI
+  sections?: ProjectSection[];
+};  
 export const projects: Project[] = [
   {
     id: 1, title: "Digitasi Tutupan Lahan dan Morfologi Pulau Galang - Batam", type: "Digitasi Tutupan Lahan dan Morfologi", location: "Batam, Kepulauan Riau", latitude: 0.7607059609275817, longitude: 104.24241590229668, description: "Proyek pemetaan ini dilaksanakan melalui akuisisi data seluas ±1322 hektare di Pulau Galang menggunakan UAV DJI Matrice 350 RTK yang dilengkapi sensor LiDAR Zenmuse L2. Data orthophoto dan point cloud LiDAR yang dihasilkan kemudian diolah untuk mengidentifikasi tutupan lahan dan menganalisis morfologi permukaan secara akurat.Hasil pemetaan menunjukkan variasi tutupan lahan berupa kawasan pesisir, mangrove, hutan, semak belukar, area pertanian, serta lahan berbukit. Peta yang dihasilkan menjadi dasar penting dalam perencanaan tata guna lahan, pengelolaan sumber daya alam, dan konservasi lingkungan di Pulau Galang.", surveyDate: " September 2025", equipment: ["UAV DJI Matrice 350 RTK", "GPS Geodetic"], memberIds: [1, 2, 5],
@@ -46,7 +55,6 @@ export const projects: Project[] = [
     previewPdf: '/hasil/PAITON/PAITON.pdf',
     files: [
       { image: '/hasil/PAITON/PAITON.png', pdf: '/hasil/PAITON/PAITON.pdf' },
-      { image: '/hasil/PAITON/SUTTPAITON.png', pdf: '/hasil/PAITON/SUTTPAITON.pdf' }
     ]
   },
   {
@@ -64,7 +72,6 @@ export const projects: Project[] = [
     previewPdf: '/hasil/BELAWANMEDAN/BELAWANMEDAN.pdf',
     files: [
       { image: '/hasil/BELAWANMEDAN/BELAWANMEDAN.png', pdf: '/hasil/BELAWANMEDAN/BELAWANMEDAN.pdf' },
-      { image: '/hasil/BELAWANMEDAN/BELAWANLAYOUT.png', pdf: '/hasil/BELAWANMEDAN/BELAWANLAYOUT.pdf' }
     ]
   },
   {
@@ -82,7 +89,6 @@ export const projects: Project[] = [
     previewPdf: '/hasil/SOETA/SOETA.pdf',
     files: [
       { image: '/hasil/SOETA/SOETA.png', pdf: '/hasil/SOETA/SOETA.pdf' },
-      { image: '/hasil/SOETA/seota.png', pdf: '/hasil/SOETA/seota.pdf' }
     ]
   },
   {
@@ -100,7 +106,6 @@ export const projects: Project[] = [
     previewPdf: '/hasil/SEMERU/SEMERU.pdf',
     files: [
       { image: '/hasil/SEMERU/SEMERU.png', pdf: '/hasil/SEMERU/semeru.pdf' },
-      { image: '/hasil/SEMERU/semeru.jpg', pdf: '/hasil/SEMERU/semeru.pdf' }
     ]
   },
   {
@@ -117,7 +122,6 @@ export const projects: Project[] = [
     preview: '/hasil/CIMAHI/CIMAHI.png',
     previewPdf: '/hasil/CIMAHI/CIMAHIALL.pdf',
     files: [
-      { image: '/hasil/CIMAHI/CIMAHI.png', pdf: '/hasil/CIMAHI/CIMAHIALL.pdf' },
       { image: '/hasil/CIMAHI/CIMAHIBANGUNAN.jpg', pdf: '/hasil/CIMAHI/CIMAHIALL.pdf' },
       { image: '/hasil/CIMAHI/CIMAHIPERAIRAN.jpg', pdf: '/hasil/CIMAHI/CIMAHIALL.pdf' },
       { image: '/hasil/CIMAHI/CIMAHITRANSPORTASI.jpg', pdf: '/hasil/CIMAHI/CIMAHIALL.pdf' }
@@ -157,4 +161,49 @@ export const projects: Project[] = [
       { image: '/hasil/BANTEN/banten.png', pdf: '/hasil/BANTEN/banten.pdf' }
     ]
   },
+  {
+  id: 9,
+  title: "Penelitian Pulau Pari",
+  type: "Penelitian Kelautan dan Pesisir",
+  location: "Pulau Pari, Kepulauan Seribu",
+  latitude: -5.858,
+  longitude: 106.616,
+
+  description: "Penelitian ini dilakukan pada kawasan terumbu karang dengan fokus pada pemodelan tiga dimensi menggunakan metode Gaussian Splatting berbasis Close-Range Photogrammetry (CRP). Proses penelitian meliputi tahapan rekonstruksi dan pemodelan 3D terumbu karang. Hasil pemodelan telah selesai dibuat dan digunakan untuk pemetaan struktur terumbu karang secara tiga dimensi.",
+
+  memberIds: [3, 4, 6 , 7], // acak dulu
+
+  preview: "/hasil/PULAUPARI/PARI.png",
+  previewPdf: "/hasil/PULAUPARI/PARI.pdf",
+
+  files: [
+    { image: "/hasil/PULAUPARI/PARI.png", pdf: "/hasil/PULAUPARI/PARI.pdf" }
+  ],
+
+  sections: [
+    {
+      title: "Pemetaan Ekosistem Pesisir Dangkal",
+      description:
+        "Penelitian ini berfokus pada pengolahan ekosistem pesisir dangkal menggunakan data multispektral. Saat ini penelitian berada pada tahap pengolahan data, meliputi koreksi geometrik dan analisis spektral awal. Hasil akhir masih dalam proses validasi dan akan digunakan untuk pemetaan ekosistem pesisir dangkal.",
+    },
+    {
+      title: "Prediksi Pasang Surut",
+      description:
+        "Penelitian ini bertujuan untuk menggambarkan pola fluktuasi muka air laut dalam satu siklus pasut, menentukan pasang tertinggi dan surut terendah, serta sebagai dasar koreksi elevasi pada kegiatan survei dan pemetaan perairan.",
+      photos: [
+        "/hasil/PULAUPARI/PASUT/pasut1.jpg",
+        "/hasil/PULAUPARI/PASUT/pasut2.jpg",
+        "/hasil/PULAUPARI/PASUT/pasut3.jpg"
+      ]
+    },
+    {
+      title: "Estimasi Blue Carbon",
+      description:
+        "Penelitian ini bertujuan untuk mengestimasi stok penyimpanan karbon biru pada biomassa melalui pendekatan antara data lapangan dan data penginderaan jauh berbasis UAV multispektral, dengan analisis kandungan klorofil menggunakan algoritma klorofil-a dan klorofil-b.",
+    objects3d: [
+    "/hasil/PULAUPARI/BLUECARBON/TERUMBUHIDUP.obj",
+    "/hasil/PULAUPARI/BLUECARBON/TERUMBUMATI.obj"
+  ]    }
+  ]
+}
 ];

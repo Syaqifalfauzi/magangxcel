@@ -21,6 +21,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="id">
+      <head>
+        <link
+  rel="icon"
+  href="/sponsor/logo.png"
+  type="image/png"
+  sizes="16x16"
+/>
+      </head>
       <body>
         {children}
       </body>
