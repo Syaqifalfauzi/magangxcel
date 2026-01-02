@@ -31,7 +31,7 @@ export default function Stats() {
         <div className="grid md:grid-cols-4 gap-8">
           {[
             { value: "4", label: "Lokasi Survei" },
-            { value: "8", label: "Jenis Aktivitas" },
+            { value: "9", label: "Jenis Aktivitas" },
             { value: "4 Bulan", label: "Durasi Magang" },
             { value: "8 Orang", label: "Anggota Tim" },
           ].map((item, index) => (
