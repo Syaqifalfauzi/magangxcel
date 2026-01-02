@@ -8,9 +8,9 @@ export const metadata: Metadata = {
     "Dokumentasi dan hasil kegiatan magang di XCEL yang mencakup bidang geodesi, pemetaan, dan pengolahan data geospasial.",
 
   icons: {
-    icon: "/sponsor/XCEL.PNG",
-    shortcut: "/sponsor/XCEL.PNG",
-    apple: "/sponsor/XCEL.PNG",
+    icon: "/sponsor/logo.png",
+    shortcut: "/sponsor/logo.png",
+    apple: "/sponsor/logo.png",
   },
 };
 
